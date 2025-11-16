@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MuseoSpace — Cinematic Virtual Art Exhibition</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="grain"></div>
+  </div>
+  <div class="float-layer" aria-hidden="true">
+    <div class="sil s1"></div>
+    <div class="sil s2"></div>
+    <div class="sil s3"></div>
+  </div>
+
+  <header>
+    <div class="brand">
+      <div class="logo">MS</div>
+      <div>
+        <div class="site-title">MuseoSpace</div>
+        <div style="font-size:.78rem;color:var(--muted)">A cinematic virtual exhibition</div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <button id="audioBtn" class="icon audio-toggle" aria-pressed="false">Play Ambience</button>
+      <button id="startTourTop" class="icon">Start Tour</button>
+    </div>
+  </header>
+
+  <section class="lobby" id="lobby" aria-labelledby="welcome">
+    <div class="lobby-inner">
+      <h1 id="welcome">MuseoSpace — The Guided Journey</h1>
+      <p class="lead">Wander through rooms of light, brushstrokes, and hush — an intimate presentation of works selected by an imagined curator. Scroll or use navigation to move through three chapters of the exhibition.</p>
+      <div style="display:flex;justify-content:center;align-items:center;gap:12px">
+        <button id="startTour" class="start-btn">Start the Tour</button>
+        <button id="skipToGallery" class="start-btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);">Enter Gallery</button>
+      </div>
+      <p class="lobby-sub">Tip: click an artwork to focus — use left / right to navigate sections.</p>
+    </div>
+  </section>
+
+  <main class="gallery" id="gallery" role="main">
+    <!-- sections rendered by JS -->
+  </main>
+
+  <div class="nav-arrows" aria-hidden="true">
+    <button id="prevSec" title="Previous section">◀</button>
+    <button id="nextSec" title="Next section">▶</button>
+  </div>
+
+  <!-- overlay modal -->
+  <div id="overlay" class="overlay" role="dialog" aria-modal="true">
+    <div class="modal" id="modal">
+      <button class="close" id="closeModal" aria-label="Close">✕</button>
+      <div class="img-wrap" id="modalImgWrap">
+        <img id="modalImg" src="" alt="" />
+      </div>
+      <div class="info">
+        <div style="display:flex;justify-content:space-between;align-items:start;gap:10px">
+          <div>
+            <h2 id="modalTitle" style="margin:0;font-family:Merriweather;">Title</h2>
+            <div class="muted" id="modalArtist">Artist • Year • Medium</div>
+          </div>
+        </div>
+        <p id="modalDesc" style="margin-top:12px;color:var(--muted)"></p>
+        <div style="margin-top:12px" id="curatorNotes"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feedback / Reflection -->
+  <section style="padding:40px 24px;" aria-labelledby="reflect">
+    <h3 id="reflect" style="font-family:Merriweather;">Visitor Reflection</h3>
+    <div class="feedback">
+      <form id="feedbackForm" novalidate>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            <div class="error" id="errName"></div>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <div class="error" id="errEmail"></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div>
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating" required>
+              <option value="">Choose...</option>
+              <option>5 — Sublime</option>
+              <option>4 — Beautiful</option>
+              <option>3 — Pleasant</option>
+              <option>2 — Meh</option>
+              <option>1 — Not for me</option>
+            </select>
+            <div class="error" id="errRating"></div>
+          </div>
+          <div>
+            <label for="fav">Favorite artwork</label>
+            <select id="fav" name="fav">
+              <option value="">(pick one after you explore)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="comments">Comments</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="What did the exhibition make you feel?" required></textarea>
+          <div class="error" id="errComments"></div>
+        </div>
+        <div class="submit-row">
+          <button type="submit" class="start-btn" style="padding:10px 16px">Submit Reflection</button>
+          <div style="color:var(--muted);font-size:.92rem">Your reflection will appear below after submission.</div>
+        </div>
+      </form>
+      <div id="visitorList" style="margin-top:18px"></div>
+    </div>
+  </section>
+
+  <footer>
+    © MuseoSpace — a static cinematic demo. Built with HTML, CSS, and Vanilla JS.
+  </footer>
+
+  <div id="thanksBox" class="thanks" role="status" aria-live="polite">
+    <div style="display:flex;align-items:center;gap:12px"><div style="width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#bfa2ff,#ffd6a8);display:grid;place-items:center;color:#081018;font-weight:700">✓</div>
+    <div><strong id="thanksTitle">Thank you</strong><div style="color:var(--muted);font-size:.94rem">Your reflection has been recorded.</div></div></div>
+    <div id="thanksActions" style="margin-top:12px;display:flex;gap:8px">
+      <button id="restartBtn" class="start-btn" style="padding:8px 12px">Restart Tour</button>
+      <div style="display:flex;gap:8px;margin-left:auto">
+        <a href="#" class="icon" id="shareFb">Share</a>
+      </div>
+    </div>
+  </div>
+
+<script src="app.js" defer></script>
+</body>
+</html>

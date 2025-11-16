@@ -99,7 +99,7 @@ footer{Padding:28px;text-align:center;color:var(--muted);font-size:.9rem}
 /* Responsive / mobile first */
 @media(min-width:900px){
   .modal{grid-template-columns:1fr 340px}
-  .art-thumb{height:260px}
+  .art-thumb{height:600px}
 }
 @media(max-width:720px){
   header{padding:14px}

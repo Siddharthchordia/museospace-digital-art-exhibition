@@ -1,43 +1,33 @@
 // --- Data: artworks (using your provided image files) ---
 const artworks = [
   {
-    id: 1,
-    title: "Chromatic Meditation",
-    artist: "Liora Estelle",
-    year: 2016,
-    medium: "Acrylic & Pigment on Canvas",
-    description: "A contemplative exploration of layered hues, where soft gradients dissolve into one another like drifting thoughts.",
-    curator: "A delicate balance between structure and serenity — each tone feels like a whispered reflection.",
-    image: "assets/chromatic-meditation.jpg"
-  },
-  {
     id: 2,
     title: "Echoes of Dawn",
     artist: "Maren Holt",
     year: 1994,
     medium: "Oil on Board",
-    description: "A luminous portrayal of first light cresting over a quiet horizon as darkness retreats into memory.",
-    curator: "Amber highlights guide the gaze upward, evoking hope and renewal.",
+    description: "Echoes of Dawn captures the fragile instant when night yields to morning light; the painting breathes with a softened luminosity that moves across mist-laden trees and a still lake. Holt’s brushwork balances taut realism with atmospheric suggestion: distant forms dissolve in vapor, while foreground details retain a tender clarity that anchors perception. The composition is cinematic in its pacing — it invites a slow forward look, as if the scene will continue unfolding beyond the picture plane.",
+    curator: "Holt makes light the protagonist: its gentle, directional warmth organizes the entire composition and acts as a quiet narrator. The painting is an exercise in patience, a reminder that meaning often emerges in the liminal spaces between visibility and memory.",
     image: "assets/echoes-of-dawn.jpg"
   },
   {
     id: 3,
     title: "Fragmented Reality",
-    artist: "Kaito Nomura",
-    year: 2021,
-    medium: "Mixed Media & Digital Collage",
-    description: "A deconstructed visual narrative where form, memory, and perception collide through geometric fractures.",
-    curator: "Harmony is intentionally broken to mirror the fragmented nature of modern existence.",
+    artist: "Kael Torrin",
+    year: 2020,
+    medium: "Mixed Media on Canvas (Acrylic, Digital Pigment Overlay)",
+    description: "Fragmented Reality juxtaposes a meticulously rendered human profile with an interlocking system of geometric planes, circles, and textures — a visual argument about identity in the age of data. Torrin’s palette alternates between saturated warmth and cool structural blues, creating a push-pull that is both psychological and formal. Layers of translucent pigment and digital overlay fracture and recompose the face, suggesting memory’s discontinuities and the many surfaces through which a contemporary self is perceived.",
+    curator: "This work reframes portraiture by making fragmentation the subject: identity is shown as constructed and networked rather than singular. Attend to the way geometric elements rhythmically enter and exit the figure — they feel less like obstructions and more like coordinates of contemporary subjectivity.",
     image: "assets/fragmented-reality.jpg"
   },
   {
     id: 4,
     title: "Interconnected",
     artist: "Selene Duarte",
-    year: 2011,
-    medium: "Ink & Metallic Pigment",
-    description: "Swirling networks of lines and luminous threads evoke cosmic relationships across distance.",
-    curator: "Shimmering metallic accents mimic constellations in constant motion.",
+    year: 2019,
+    medium: "Digital Light Installation (LED Matrix, Reflective Panels, Projection Layering)",
+    description: "Interconnected is an immersive study of presence within networks of light and reflection. A solitary silhouette proceeds through a corridor of suspended points and ribbons of illumination that suggest data flows, synapses, or constellations; each strand is both materially present and visually ephemeral. The work plays on reflection and repetition so the viewer’s body becomes part of the installation’s circuitry, alternating between being subject and signal as they move.",
+    curator: "Duarte dissolves the boundary between human scale and system scale: the installation’s luminous threads map invisible relationships and invite an embodied experience of connectivity. The subtle choreography of light encourages viewers to consider their own role within sprawling, unseen networks.",
     image: "assets/interconnected.jpg"
   },
   {
@@ -46,8 +36,8 @@ const artworks = [
     artist: "Aurelia Venn",
     year: 1887,
     medium: "Oil on Canvas",
-    description: "A meditative interpretation of starlight suspended in stillness, drawing the viewer inward.",
-    curator: "Brushwork mimics the diffusion of distant celestial glow.",
+    description: "Star of Silence is a reverent nocturne in which a single, star-like blaze descends toward a solitary figure standing on a quiet knoll. Venn’s technique layers whisper-thin glazes to render an atmospheric depth where nebulae and night tones soften into the warm, convergent flare of the star. The painting composes silence as a tangible presence — the beam of light feels like a language, an address from the cosmos that is equal parts altar and horizon.",
+    curator: "Venn’s brushwork dissolves the boundary between divine symbolism and intimate contemplation. The painting reads as a meditation on reception: a human being positioned to receive, to be answered by the sky.",
     image: "assets/star-of-silence.jpg"
   },
   {
@@ -55,12 +45,23 @@ const artworks = [
     title: "Urban Solitude",
     artist: "Rowan Mercer",
     year: 2005,
-    medium: "Digital Illustration",
-    description: "Muted city tones frame a lone figure drifting through an anonymous street, capturing modern isolation.",
-    curator: "Soft blur effects introduce emotional distance, emphasizing solitude within urban spaces.",
+    medium: "Digital Illustration / Photoreal Composite",
+    description: "Urban Solitude frames a lone figure in the cinematic geometry of a rain-slicked avenue, where neon signage and the echo of headlights suggest movement and commerce while mood registers as stillness. Mercer composes with a restrained palette of teal and warm orange reflections, using atmospheric haze and softened focus to emphasize emotional distance rather than documentary detail. The image is an elegy to lone presence within metropolitan density — anonymous yet epic in emotional scale.",
+    curator: "A carefully staged meditation on isolation amid metropolitan abundance: the work uses reflective surfaces and diffuse light to mirror inner separateness. Pay attention to how the figure’s silhouette is echoed subtly across puddles and storefront glows — a doubling that intensifies the theme of internal echo.",
     image: "assets/urban-solitude.jpg"
+  },
+  {
+    id: 1,
+    title: "Radiant Convergence",
+    artist: "Elara Myles",
+    year: 2022,
+    medium: "Acrylic & Oil Blend on Canvas",
+    description: "Radiant Convergence is a luminous abstract that stages color as both event and environment: cool ceruleans and deep indigos surrender to a central axis of molten gold and coral that reads like a sunrise within a nebula. Myles uses layered strokes, spattered textures, and delicate drips to simulate the particulate nature of light — tiny marks become stellar dust, pooling into larger phenomena of glow and intensity. The piece moves between suggestion and spectacle, asking viewers to inhabit the moment where energy coheres into form.",
+    curator: "Here, color is the agent of emergence — the painting locates the viewer at an instant of cosmic crystallization. Its tactile surface and radiant center invite contemplative immersion, asking us to consider how small elements aggregate into luminous meaning.",
+    image: "assets/radiant-convergence.jpg"
   }
 ];
+
 
 // --- Sections (2 artworks per category, updated names) ---
 const sections = [
